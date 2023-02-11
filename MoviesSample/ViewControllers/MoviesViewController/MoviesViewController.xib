@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviesViewController" customModule="MoviesSample" customModuleProvider="target">
+            <connections>
+                <outlet property="movieCollectionView" destination="9Ka-dV-Zce" id="K0p-AV-wGy"/>
+                <outlet property="moviesNotFoundLabel" destination="iMC-G5-OxU" id="oLz-7k-KkN"/>
+                <outlet property="searchBar" destination="Jgs-yF-x1i" id="k8J-so-2TI"/>
+                <outlet property="view" destination="8Xc-Qk-xmd" id="acF-uX-gK8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="8Xc-Qk-xmd">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies Not Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMC-G5-OxU" userLabel="Title Label">
+                    <rect key="frame" x="78" y="244" width="258" height="38.5"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <searchBar clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" searchBarStyle="prominent" text="" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgs-yF-x1i">
+                    <rect key="frame" x="16" y="104" width="382" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Hqb-ec-4jf"/>
+                    </constraints>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="1.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9Ka-dV-Zce">
+                    <rect key="frame" x="0.0" y="164" width="414" height="698"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xrB-9n-56m">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="10"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="iuE-PJ-cIO"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jgs-yF-x1i" secondAttribute="trailing" constant="16" id="1d2-e9-FBp"/>
+                <constraint firstItem="iuE-PJ-cIO" firstAttribute="bottom" secondItem="9Ka-dV-Zce" secondAttribute="bottom" id="2Sa-Df-MPs"/>
+                <constraint firstItem="iuE-PJ-cIO" firstAttribute="trailing" secondItem="9Ka-dV-Zce" secondAttribute="trailing" id="6jl-ic-nrF"/>
+                <constraint firstItem="9Ka-dV-Zce" firstAttribute="leading" secondItem="iuE-PJ-cIO" secondAttribute="leading" id="KLE-Op-65u"/>
+                <constraint firstItem="Jgs-yF-x1i" firstAttribute="leading" secondItem="iuE-PJ-cIO" secondAttribute="leading" constant="16" id="NQb-Q1-tdC"/>
+                <constraint firstItem="iMC-G5-OxU" firstAttribute="top" secondItem="Jgs-yF-x1i" secondAttribute="bottom" constant="100" id="TgG-cw-tBq"/>
+                <constraint firstItem="iMC-G5-OxU" firstAttribute="centerX" secondItem="8Xc-Qk-xmd" secondAttribute="centerX" id="Uhi-s2-ljG"/>
+                <constraint firstItem="9Ka-dV-Zce" firstAttribute="top" secondItem="Jgs-yF-x1i" secondAttribute="bottom" constant="20" id="b1z-GN-Acd"/>
+                <constraint firstItem="Jgs-yF-x1i" firstAttribute="top" secondItem="iuE-PJ-cIO" secondAttribute="top" constant="60" id="qf9-1W-F7J"/>
+            </constraints>
+            <point key="canvasLocation" x="358" y="84"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

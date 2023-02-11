@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieItemCollectionViewCell" customModule="MoviesSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="214" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="214" height="275"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Chf-Xr-0RZ">
+                        <rect key="frame" x="0.0" y="0.0" width="214" height="275"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_background" translatesAutoresizingMaskIntoConstraints="NO" id="U2q-hC-QWz">
+                                <rect key="frame" x="0.0" y="0.0" width="214" height="225"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyQ-gl-sfz">
+                                <rect key="frame" x="0.0" y="225" width="214" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marvel One-Shot: Agent Carter Marvel One-Shot: Agent Carter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kI-Fh-VsX" userLabel="Title">
+                                        <rect key="frame" x="5" y="5" width="162" height="35"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-9A-o3b" userLabel="Year">
+                                        <rect key="frame" x="172" y="10" width="37" height="30"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Pe1-9A-o3b" secondAttribute="trailing" constant="5" id="0qu-z9-fpv"/>
+                                    <constraint firstItem="5kI-Fh-VsX" firstAttribute="leading" secondItem="tyQ-gl-sfz" secondAttribute="leading" constant="5" id="BFT-tH-XYa"/>
+                                    <constraint firstItem="Pe1-9A-o3b" firstAttribute="top" secondItem="tyQ-gl-sfz" secondAttribute="top" constant="10" id="Def-4H-fly"/>
+                                    <constraint firstAttribute="bottom" secondItem="5kI-Fh-VsX" secondAttribute="bottom" constant="10" id="MqA-HM-QPN"/>
+                                    <constraint firstAttribute="height" constant="50" id="bsN-Lk-nuL"/>
+                                    <constraint firstItem="Pe1-9A-o3b" firstAttribute="leading" secondItem="5kI-Fh-VsX" secondAttribute="trailing" constant="5" id="ekI-OI-hTt"/>
+                                    <constraint firstItem="5kI-Fh-VsX" firstAttribute="top" secondItem="tyQ-gl-sfz" secondAttribute="top" constant="5" id="fX6-q8-sI6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pe1-9A-o3b" secondAttribute="bottom" constant="10" id="yN3-ea-5w0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tyQ-gl-sfz" secondAttribute="trailing" id="63u-p2-5sQ"/>
+                            <constraint firstAttribute="bottom" secondItem="tyQ-gl-sfz" secondAttribute="bottom" id="ShX-3o-PLL"/>
+                            <constraint firstItem="tyQ-gl-sfz" firstAttribute="top" secondItem="U2q-hC-QWz" secondAttribute="bottom" id="Vmr-7o-Y9Z"/>
+                            <constraint firstItem="U2q-hC-QWz" firstAttribute="leading" secondItem="Chf-Xr-0RZ" secondAttribute="leading" id="gKL-f6-0xX"/>
+                            <constraint firstItem="U2q-hC-QWz" firstAttribute="top" secondItem="Chf-Xr-0RZ" secondAttribute="top" id="nMa-Tg-mKx"/>
+                            <constraint firstItem="tyQ-gl-sfz" firstAttribute="leading" secondItem="Chf-Xr-0RZ" secondAttribute="leading" id="rOJ-IF-4V2"/>
+                            <constraint firstAttribute="trailing" secondItem="U2q-hC-QWz" secondAttribute="trailing" id="tah-fV-VmG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Chf-Xr-0RZ" secondAttribute="bottom" id="4Hj-BI-Omy"/>
+                <constraint firstItem="Chf-Xr-0RZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="I8r-nv-bQa"/>
+                <constraint firstItem="Chf-Xr-0RZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KNp-SA-L5D"/>
+                <constraint firstAttribute="trailing" secondItem="Chf-Xr-0RZ" secondAttribute="trailing" id="fmI-91-qDN"/>
+            </constraints>
+            <size key="customSize" width="214" height="275"/>
+            <connections>
+                <outlet property="posterImageView" destination="U2q-hC-QWz" id="4dP-Tg-EC9"/>
+                <outlet property="titleLabel" destination="5kI-Fh-VsX" id="P6W-82-T4c"/>
+                <outlet property="yearLabel" destination="Pe1-9A-o3b" id="TXX-7h-f5R"/>
+            </connections>
+            <point key="canvasLocation" x="250.72463768115944" y="154.35267857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="image_background" width="275" height="183"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
