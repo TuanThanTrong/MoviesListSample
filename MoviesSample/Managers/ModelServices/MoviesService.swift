@@ -29,11 +29,11 @@ enum MoviesService: APIRouter {
         return nil
     }
     
-    static func getMovieList(query: String, completion: @escaping ([Movie]?, PSError?) -> Void) {
+    static func getMovieList(query: String, completion: @escaping (MoviesResponse?, PSError?) -> Void) {
         let getMovie: MoviesService = .getMovies(query: query)
         APIService.performRequestData(route: getMovie, decodingType: MoviesResponse.self) { (result,error) in
-            if let result = result as? MoviesResponse, let movies = result.movies {
-                completion(movies, nil)
+            if let result = result as? MoviesResponse, let movies = result.movies, !movies.isEmpty {
+                completion(result, nil)
             } else {
                 completion(nil, error)
             }

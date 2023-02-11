@@ -13,8 +13,6 @@ class MoviesViewController: BaseViewController {
     @IBOutlet private weak var movieCollectionView: UICollectionView!
     @IBOutlet private weak var moviesNotFoundLabel: UILabel!
     
-    var moviesList: [Movie] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
@@ -25,6 +23,7 @@ class MoviesViewController: BaseViewController {
     override func setupUI() {
         super.setupUI()
         movieCollectionView.register(MovieItemCollectionViewCell.self)
+        movieCollectionView.registerFooterNib(LoadmoreReusableView.self)
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
     }
@@ -37,8 +36,9 @@ class MoviesViewController: BaseViewController {
     }
     
     private func updateUI() {
-        moviesNotFoundLabel.isHidden = !moviesList.isEmpty
-        movieCollectionView.isHidden = moviesList.isEmpty
+        guard let moviesViewModel = viewModel as? MoviesViewModel else { return }
+        moviesNotFoundLabel.isHidden = !moviesViewModel.moviesList.isEmpty
+        movieCollectionView.isHidden = moviesViewModel.moviesList.isEmpty
     }
     
     private func bindAction() {
@@ -58,34 +58,51 @@ class MoviesViewController: BaseViewController {
         ).disposed(by: disposeBag)
         
         moviesViewModel.onFailure.drive(onNext: { [weak self] (errorString) in
-            self?.moviesList = []
+            moviesViewModel.moviesList.removeAll()
             self?.updateUI()
             self?.movieCollectionView.reloadData()
         })
         .disposed(by: disposeBag)
-        moviesViewModel.getMoviesOnSuccess.drive(onNext: { [weak self](movies) in
-            self?.moviesList = movies
+        moviesViewModel.getMoviesOnSuccess.drive(onNext: { [weak self] _ in
             self?.updateUI()
             self?.movieCollectionView.reloadData()
         })
         .disposed(by: disposeBag)
     }
-
+    
+    private func configureCell(cell: MovieItemCollectionViewCell, indexPath: IndexPath) {
+        guard let moviesViewModel = viewModel as? MoviesViewModel else { return }
+        cell.movie = moviesViewModel.moviesList[indexPath.row]
+    }
 }
 
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 extension MoviesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return moviesList.count
+        guard let moviesViewModel = viewModel as? MoviesViewModel else { return 0 }
+        return moviesViewModel.moviesList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as MovieItemCollectionViewCell
-        cell.movie = moviesList[indexPath.row]
+        configureCell(cell: cell, indexPath: indexPath)
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let viewModel = viewModel as? MoviesViewModel else { return }
+        if indexPath.row == collectionView.numberOfItems(inSection: indexPath.section) - 1, viewModel.canLoadmore(), !viewModel.isLoadingData {
+            viewModel.loadMoreEvent.onNext(())
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionFooter:
+            let reusableview = collectionView.dequeueReusableFooterView(forIndexPath: indexPath) as LoadmoreReusableView
+            return reusableview
+        default:  fatalError("Unexpected element kind")
+        }
     }
 }
 
@@ -95,6 +112,25 @@ extension MoviesViewController: UICollectionViewDelegateFlowLayout {
             let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
             let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
             let size:CGFloat = (movieCollectionView.frame.size.width - space) / 2.0
-            return CGSize(width: size, height: 250)
+        return CGSize(width: size, height: Configs.itemHeight)
         }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        guard let viewModel = viewModel as? MoviesViewModel else {
+            return .zero
+        }
+        let viewWidth = self.view.frame.width
+        var viewHeight = Configs.footerHeight
+        if !viewModel.canLoadmore() {
+            viewHeight = 0
+        }
+        return CGSize(width: viewWidth, height: viewHeight)
+    }
+}
+
+extension MoviesViewController {
+    struct Configs {
+        static let footerHeight: CGFloat = 67.0
+        static let itemHeight: CGFloat = 250.0
+    }
 }

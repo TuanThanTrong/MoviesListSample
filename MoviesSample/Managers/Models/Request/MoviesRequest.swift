@@ -10,13 +10,15 @@ import Foundation
 class MoviesRequest: Codable {
     var apikey = APIKey.key
     var type = Configs.typeRequest
-    var searchText: String?
+    var textSearch: String?
+    var page: Int
     enum CodingKeys: String, CodingKey {
-        case apikey, type, searchText = "s"
+        case apikey, type, textSearch = "s", page
     }
     
-    init(searchText: String?) {
-        self.searchText = searchText
+    init(textSearch: String?, page: Int) {
+        self.textSearch = textSearch
+        self.page = page
     }
 }
 extension MoviesRequest {
