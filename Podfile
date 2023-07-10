@@ -13,4 +13,5 @@ target 'MoviesSample' do
     pod 'RxCocoa',    '~> 5.0'
     pod 'R.swift', '~> 5.3'
     pod 'SwiftyJSON', '~> 4.0.0'
+    pod 'UBottomSheet', '~> 1.0'
 end

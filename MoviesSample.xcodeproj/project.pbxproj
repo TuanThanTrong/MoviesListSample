@@ -38,6 +38,17 @@
 		40751B6B29975134006694B9 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40751B6A29975134006694B9 /* MoviesViewModel.swift */; };
 		40751B6F29978ED5006694B9 /* LoadmoreReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40751B6D29978ED5006694B9 /* LoadmoreReusableView.swift */; };
 		40751B7029978ED5006694B9 /* LoadmoreReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40751B6E29978ED5006694B9 /* LoadmoreReusableView.xib */; };
+		40A2799D2A5A6E81004986C3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A2799B2A5A6E81004986C3 /* MapViewController.swift */; };
+		40A2799E2A5A6E81004986C3 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40A2799C2A5A6E81004986C3 /* MapViewController.xib */; };
+		40A279A22A5A99E5004986C3 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A279A02A5A99E5004986C3 /* SheetViewController.swift */; };
+		40A279A32A5A99E5004986C3 /* SheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40A279A12A5A99E5004986C3 /* SheetViewController.xib */; };
+		40A279AF2A5A9DDC004986C3 /* HorizontalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40A279A92A5A9DDC004986C3 /* HorizontalCell.xib */; };
+		40A279B02A5A9DDC004986C3 /* MapItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40A279AA2A5A9DDC004986C3 /* MapItemCell.xib */; };
+		40A279B12A5A9DDC004986C3 /* MapItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A279AB2A5A9DDC004986C3 /* MapItemCell.swift */; };
+		40A279B22A5A9DDC004986C3 /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A279AC2A5A9DDC004986C3 /* HorizontalCell.swift */; };
+		40A279B32A5A9DDC004986C3 /* EmbeddedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A279AD2A5A9DDC004986C3 /* EmbeddedCell.swift */; };
+		40A279B42A5A9DDC004986C3 /* EmbeddedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40A279AE2A5A9DDC004986C3 /* EmbeddedCell.xib */; };
+		40A279B62A5AAB6E004986C3 /* DynamicHeightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A279B52A5AAB6E004986C3 /* DynamicHeightTableView.swift */; };
 		D2199BA3EFA90D5393D34F6E /* Pods_MoviesSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5482C65484C0ECBBDD805C2D /* Pods_MoviesSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +88,17 @@
 		40751B6A29975134006694B9 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		40751B6D29978ED5006694B9 /* LoadmoreReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadmoreReusableView.swift; sourceTree = "<group>"; };
 		40751B6E29978ED5006694B9 /* LoadmoreReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadmoreReusableView.xib; sourceTree = "<group>"; };
+		40A2799B2A5A6E81004986C3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		40A2799C2A5A6E81004986C3 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		40A279A02A5A99E5004986C3 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		40A279A12A5A99E5004986C3 /* SheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SheetViewController.xib; sourceTree = "<group>"; };
+		40A279A92A5A9DDC004986C3 /* HorizontalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HorizontalCell.xib; sourceTree = "<group>"; };
+		40A279AA2A5A9DDC004986C3 /* MapItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapItemCell.xib; sourceTree = "<group>"; };
+		40A279AB2A5A9DDC004986C3 /* MapItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapItemCell.swift; sourceTree = "<group>"; };
+		40A279AC2A5A9DDC004986C3 /* HorizontalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
+		40A279AD2A5A9DDC004986C3 /* EmbeddedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedCell.swift; sourceTree = "<group>"; };
+		40A279AE2A5A9DDC004986C3 /* EmbeddedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmbeddedCell.xib; sourceTree = "<group>"; };
+		40A279B52A5AAB6E004986C3 /* DynamicHeightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightTableView.swift; sourceTree = "<group>"; };
 		5482C65484C0ECBBDD805C2D /* Pods_MoviesSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,6 +161,9 @@
 		2E60C180299620C2001B4CDD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				40A279A82A5A9DDC004986C3 /* Cells */,
+				40A2799F2A5A99B1004986C3 /* SheetViewController */,
+				40A2799A2A5A6C7D004986C3 /* MapViewController */,
 				2E60C1AF2996412D001B4CDD /* BaseViewController */,
 				2E60C181299620D9001B4CDD /* MoviesViewController */,
 			);
@@ -263,6 +288,7 @@
 			children = (
 				2EE5D30C29964E0600A62DD1 /* AppString.swift */,
 				2EE5D30D29964E0600A62DD1 /* Define.swift */,
+				40A279B52A5AAB6E004986C3 /* DynamicHeightTableView.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -291,6 +317,37 @@
 				40751B6E29978ED5006694B9 /* LoadmoreReusableView.xib */,
 			);
 			path = LoadmoreView;
+			sourceTree = "<group>";
+		};
+		40A2799A2A5A6C7D004986C3 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				40A2799B2A5A6E81004986C3 /* MapViewController.swift */,
+				40A2799C2A5A6E81004986C3 /* MapViewController.xib */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		40A2799F2A5A99B1004986C3 /* SheetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				40A279A02A5A99E5004986C3 /* SheetViewController.swift */,
+				40A279A12A5A99E5004986C3 /* SheetViewController.xib */,
+			);
+			path = SheetViewController;
+			sourceTree = "<group>";
+		};
+		40A279A82A5A9DDC004986C3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				40A279A92A5A9DDC004986C3 /* HorizontalCell.xib */,
+				40A279AA2A5A9DDC004986C3 /* MapItemCell.xib */,
+				40A279AB2A5A9DDC004986C3 /* MapItemCell.swift */,
+				40A279AC2A5A9DDC004986C3 /* HorizontalCell.swift */,
+				40A279AD2A5A9DDC004986C3 /* EmbeddedCell.swift */,
+				40A279AE2A5A9DDC004986C3 /* EmbeddedCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		6650E22573CDC7CD11661F52 /* Pods */ = {
@@ -362,13 +419,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40A279B02A5A9DDC004986C3 /* MapItemCell.xib in Resources */,
 				2EE5D315299658C200A62DD1 /* MovieItemCollectionViewCell.xib in Resources */,
 				2E60C17629961E3D001B4CDD /* LaunchScreen.storyboard in Resources */,
+				40A279B42A5A9DDC004986C3 /* EmbeddedCell.xib in Resources */,
 				2E60C1B62996423C001B4CDD /* NaviView.xib in Resources */,
+				40A2799E2A5A6E81004986C3 /* MapViewController.xib in Resources */,
 				2E60C17329961E3D001B4CDD /* Assets.xcassets in Resources */,
 				2E60C17129961E3C001B4CDD /* Main.storyboard in Resources */,
 				2E60C17E29961FDE001B4CDD /* MoviesViewController.xib in Resources */,
+				40A279AF2A5A9DDC004986C3 /* HorizontalCell.xib in Resources */,
 				40751B7029978ED5006694B9 /* LoadmoreReusableView.xib in Resources */,
+				40A279A32A5A99E5004986C3 /* SheetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,9 +491,12 @@
 				2E60C1AD299640AB001B4CDD /* String+Extensions.swift in Sources */,
 				2EE5D314299658C200A62DD1 /* MovieItemCollectionViewCell.swift in Sources */,
 				2EE5D30E29964E0600A62DD1 /* AppString.swift in Sources */,
+				40A2799D2A5A6E81004986C3 /* MapViewController.swift in Sources */,
 				2E60C1B12996414C001B4CDD /* BaseViewController.swift in Sources */,
 				2E60C195299626A6001B4CDD /* APIService.swift in Sources */,
 				2E60C16A29961E3C001B4CDD /* AppDelegate.swift in Sources */,
+				40A279B62A5AAB6E004986C3 /* DynamicHeightTableView.swift in Sources */,
+				40A279B12A5A9DDC004986C3 /* MapItemCell.swift in Sources */,
 				2E60C1B72996423C001B4CDD /* NaviView.swift in Sources */,
 				40751B6B29975134006694B9 /* MoviesViewModel.swift in Sources */,
 				2E60C1AE299640AB001B4CDD /* Dictionary+Extension.swift in Sources */,
@@ -440,10 +505,13 @@
 				2EE5D30F29964E0600A62DD1 /* Define.swift in Sources */,
 				2E60C1A62996404B001B4CDD /* ReusableView.swift in Sources */,
 				2E60C1AB299640AB001B4CDD /* Reactive+Extension.swift in Sources */,
+				40A279B22A5A9DDC004986C3 /* HorizontalCell.swift in Sources */,
 				2E60C1AC299640AB001B4CDD /* UISearchBar+Extensions.swift in Sources */,
 				2E60C18429962545001B4CDD /* BaseViewModel.swift in Sources */,
+				40A279A22A5A99E5004986C3 /* SheetViewController.swift in Sources */,
 				2E60C19B299626A6001B4CDD /* MoviesService.swift in Sources */,
 				2E60C194299626A6001B4CDD /* Constants.swift in Sources */,
+				40A279B32A5A9DDC004986C3 /* EmbeddedCell.swift in Sources */,
 				2E60C19A299626A6001B4CDD /* MoviesRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
